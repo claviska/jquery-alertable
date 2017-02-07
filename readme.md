@@ -11,9 +11,9 @@ This plugin provides a minimal, lightweight, and customizable alternative to `wi
 Features:
 
 - Simple syntax:
-    - `$.alertable.alert('Howdy!')`
-    - `$.alertable.confirm('You sure?').then(function() { ... })`
-    - `$.alertable.prompt('How many?').then(function(data) { ... })`
+  - `$.alertable.alert('Howdy!')`
+  - `$.alertable.confirm('You sure?').then(function() { ... })`
+  - `$.alertable.prompt('How many?').then(function(data) { ... })`
 - Minimal default styles; easy to customize or write your own.
 - Show/hide hooks for adding custom animation (works well with Velocity.js).
 - Prevents focus from leaving the modal.
@@ -44,7 +44,7 @@ $.alertable.alert('Howdy!');
 
 // Example with action when the modal is dismissed
 $.alertable.alert('Howdy!').always(function() {
-    // Modal was dismissed
+  // Modal was dismissed
 });
 ```
 
@@ -53,16 +53,16 @@ Example confirmations:
 ```javascript
 // Basic example
 $.alertable.confirm('You sure?').then(function() {
-    // OK was selected
+  // OK was selected
 });
 
 // Example with then/always
 $.alertable.confirm('You sure?').then(function() {
-    // OK was selected
+  // OK was selected
 }, function() {
-    // Cancel was selected
+  // Cancel was selected
 }).always(function() {
-    // Modal was dismissed
+  // Modal was dismissed
 });
 ```
 
@@ -71,16 +71,16 @@ Example prompts:
 ```javascript
 // Basic example
 $.alertable.prompt('How many?').then(function(data) {
-    // Prompt was submitted
+  // Prompt was submitted
 });
 
 // Example with then/always
 $.alertable.prompt('How many?').then(function(data) {
-    // Prompt was submitted
+  // Prompt was submitted
 }, function() {
-    // Prompt was canceled
+  // Prompt was canceled
 }).always(function() {
-    // Modal was dismissed
+  // Modal was dismissed
 });
 ```
 
@@ -92,18 +92,18 @@ Pass options as the second argument of any method:
 
 ```javascript
 $.alertable.alert('Howdy!', {
-    optionName: optionValue,
-    ...
+  optionName: optionValue,
+  ...
 });
 
 $.alertable.confirm('You sure?', {
-    optionName: optionValue,
-    ...
+  optionName: optionValue,
+  ...
 });
 
 $.alertable.prompt('How many?', {
-    optionName: optionValue,
-    ...
+  optionName: optionValue,
+  ...
 });
 ```
 
@@ -136,9 +136,9 @@ Available options:
 - `modal`: HTML to use for the modal. Default value:
 ```html
 <form class="alertable">
-    <div class="alertable-message"></div>
-    <div class="alertable-prompt"></div>
-    <div class="alertable-buttons"></div>
+  <div class="alertable-message"></div>
+  <div class="alertable-prompt"></div>
+  <div class="alertable-buttons"></div>
 </form>
 ```
 

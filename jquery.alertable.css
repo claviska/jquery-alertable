@@ -7,91 +7,91 @@
 
 /* Modal */
 .alertable {
-    position: fixed;
-    z-index: 9999;
-    top: 38vh;
-    left: calc(50% - 150px);
-    width: 300px;
-    background: white;
-    border-radius: 4px;
-    padding: 20px;
-    margin: 0 auto;
+  position: fixed;
+  z-index: 9999;
+  top: 38vh;
+  left: calc(50% - 150px);
+  width: 300px;
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 /* Overlay */
 .alertable-overlay {
-    position: fixed;
-    z-index: 9998;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .5);
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
 }
 
 /* Message */
 .alertable-message {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* Prompt */
 .alertable-prompt {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .alertable-input {
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: none;
-    border: solid 1px #ccc;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    padding: 6px 12px;
-    display: block;
-    box-sizing: border-box;
-    margin-bottom: 10px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: none;
+  border: solid 1px #ccc;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 6px 12px;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 /* Button group */
 .alertable-buttons {
-    text-align: right;
+  text-align: right;
 }
 
 /* OK button */
 .alertable-ok {
-    background: #09d;
-    border: solid 1px #09d;
-    font-family: inherit;
-    font-size: inherit;
-    color: white;
-    border-radius: 4px;
-    padding: 6px 12px;
-    margin-left: 4px;
-    cursor: pointer;
+  background: #09d;
+  border: solid 1px #09d;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-left: 4px;
+  cursor: pointer;
 }
 
 .alertable-ok:hover,
 .alertable-ok:focus,
 .alertable-ok:active {
-    background-color: #08c;
+  background-color: #08c;
 }
 
 /* Cancel button */
 .alertable-cancel {
-    border: solid 1px #ddd;
-    background: white;
-    font-family: inherit;
-    font-size: inherit;
-    color: #888;
-    border-radius: 4px;
-    padding: 6px 12px;
-    margin-left: 4px;
-    cursor: pointer;
+  border: solid 1px #ddd;
+  background: white;
+  font-family: inherit;
+  font-size: inherit;
+  color: #888;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-left: 4px;
+  cursor: pointer;
 }
 
 .alertable-cancel:hover,
 .alertable-cancel:focus,
 .alertable-cancel:active {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }

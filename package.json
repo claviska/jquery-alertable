@@ -6,8 +6,8 @@
   "homepage": "https://github.com/claviska/jquery-alertable",
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/claviska/jquery-alertable.git"
+    "type": "git",
+    "url": "https://github.com/claviska/jquery-alertable.git"
   },
   "dependencies": {
     "jquery": ">= 1.8.x"
@@ -16,11 +16,7 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-help": "^1.6.1",
-    "gulp-jshint": "^2.0.1",
-    "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.3",
-    "jshint": "^2.9.2",
-    "jshint-stylish": "^2.2.0"
+    "gulp-uglify": "^1.5.3"
   }
 }

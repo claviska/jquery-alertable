@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>jQuery Alertable - Minimal alert, confirm, and prompt replacements.</title>
-        <style>
-            body {
-                font-family: sans-serif;
-                font-size: 16px;
-                color: #333;
-                padding: 20px;
-            }
-            h1 {
-                margin-top: 0;
-            }
-            a {
-                color: #09d;
-            }
-            .muted {
-                color: #999;
-            }
-            button {
-                border: none;
-                border-radius: 4px;
-                background: #09d;
-                box-shadow: none;
-                color: white;
-                -webkit-appearance: none;
-                padding: 10px 20px;
-                font-family: inherit;
-                font-size: inherit;
-                cursor: pointer;
-            }
-            button:hover,
-            button:focus,
-            button:active {
-                background-color: #08c;
-                outline: none;
-            }
-            button + button {
-                margin-left: 10px;
-            }
-        </style>
-    </head>
-    <body>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Alertable - Minimal alert, confirm, and prompt replacements.</title>
+  <style>
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+    padding: 20px;
+  }
+  h1 {
+    margin-top: 0;
+  }
+  a {
+    color: #09d;
+  }
+  .muted {
+    color: #999;
+  }
+  button {
+    border: none;
+    border-radius: 4px;
+    background: #09d;
+    box-shadow: none;
+    color: white;
+    -webkit-appearance: none;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+  }
+  button:hover,
+  button:focus,
+  button:active {
+    background-color: #08c;
+    outline: none;
+  }
+  button + button {
+    margin-left: 10px;
+  }
+  </style>
+</head>
+<body>
 
-        <h1>jQuery Alertable</h1>
-        <p class="muted">
-            Minimal alert, confirm, and prompt replacements.
-        </p>
-        <p>
-            These alerts are highly customizable. They ship with very basic styles so you can easily
-            override them or write your own. You can even customize the HTML and the show/hide
-            animation. Check out the docs to learn more.
-        </p>
-        <p>
-            <a href="https://github.com/claviska/jquery-alertable/">
-                Docs, download, and bugs
-            </a>
-        </p>
+  <h1>jQuery Alertable</h1>
+  <p class="muted">
+    Minimal alert, confirm, and prompt replacements.
+  </p>
+  <p>
+    These alerts are highly customizable. They ship with very basic styles so you can easily
+    override them or write your own. You can even customize the HTML and the show/hide
+    animation. Check out the docs to learn more.
+  </p>
+  <p>
+    <a href="https://github.com/claviska/jquery-alertable/">
+      Docs, download, and bugs
+    </a>
+  </p>
 
-        <h2>Default Examples</h2>
-        <p>
-            <button type="button" class="alert">Alert</button>
-            <button type="button" class="confirm">Confirm</button>
-            <button type="button" class="prompt">Prompt</button>
-        </p>
+  <h2>Default Examples</h2>
+  <p>
+    <button type="button" class="alert">Alert</button>
+    <button type="button" class="confirm">Confirm</button>
+    <button type="button" class="prompt">Prompt</button>
+  </p>
 
-        <h2>Custom Examples</h2>
-        <p>
-            <button type="button" class="confirm-html">Confirm (HTML)</button>
-            <button type="button" class="login">Login</button>
-        </p>
+  <h2>Custom Examples</h2>
+  <p>
+    <button type="button" class="confirm-html">Confirm (HTML)</button>
+    <button type="button" class="login">Login</button>
+  </p>
 
-        <p class="muted">
-            Check your console for response values.
-        </p>
+  <p class="muted">
+    Check your console for response values.
+  </p>
 
-        <link rel="stylesheet" href="jquery.alertable.css">
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-        <script src="jquery.alertable.min.js"></script>
-        <script>
-            $(function() {
-                // Alert
-                $('.alert').on('click', function() {
-                    $.alertable.alert('Howdy!').always(function() {
-                        console.log('Alert dismissed');
-                    });
-                });
+  <link rel="stylesheet" href="jquery.alertable.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="jquery.alertable.min.js"></script>
+  <script>
+  $(function() {
+    // Alert
+    $('.alert').on('click', function() {
+      $.alertable.alert('Howdy!').always(function() {
+        console.log('Alert dismissed');
+      });
+    });
 
-                // Confirm
-                $('.confirm').on('click', function() {
-                    $.alertable.confirm('You sure?').then(function() {
-                        console.log('Confirmation submitted');
-                    }, function() {
-                        console.log('Confirmation canceled');
-                    });
-                });
+    // Confirm
+    $('.confirm').on('click', function() {
+      $.alertable.confirm('You sure?').then(function() {
+        console.log('Confirmation submitted');
+      }, function() {
+        console.log('Confirmation canceled');
+      });
+    });
 
-                // Prompt
-                $('.prompt').on('click', function() {
-                    $.alertable.prompt('How many?').then(function(data) {
-                        console.log('Prompt submitted', data);
-                    }, function() {
-                        console.log('Prompt canceled');
-                    });
-                });
+    // Prompt
+    $('.prompt').on('click', function() {
+      $.alertable.prompt('How many?').then(function(data) {
+        console.log('Prompt submitted', data);
+      }, function() {
+        console.log('Prompt canceled');
+      });
+    });
 
-                // Confirm with HTML
-                $('.confirm-html').on('click', function() {
-                    $.alertable.confirm('Are you <em>really</em> sure?', {
-                        html: true
-                    }).then(function() {
-                        console.log('Confirmation submitted');
-                    }, function() {
-                        console.log('Confirmation canceled');
-                    });
-                });
+    // Confirm with HTML
+    $('.confirm-html').on('click', function() {
+      $.alertable.confirm('Are you <em>really</em> sure?', {
+        html: true
+      }).then(function() {
+        console.log('Confirmation submitted');
+      }, function() {
+        console.log('Confirmation canceled');
+      });
+    });
 
-                // Login
-                $('.login').on('click', function() {
-                    $.alertable.prompt('Login to continue', {
-                        prompt:
-                            '<input type="text" class="alertable-input" name="username" placeholder="Username">' +
-                            '<input type="password" class="alertable-input" name="password" placeholder="Password">'
-                    }).then(function(data) {
-                        console.log('Login submitted', data);
-                    }, function() {
-                        console.log('Login canceled');
-                    });
-                });
-            });
-        </script>
-    </body>
+    // Login
+    $('.login').on('click', function() {
+      $.alertable.prompt('Login to continue', {
+        prompt:
+        '<input type="text" class="alertable-input" name="username" placeholder="Username">' +
+        '<input type="password" class="alertable-input" name="password" placeholder="Password">'
+      }).then(function(data) {
+        console.log('Login submitted', data);
+      }, function() {
+        console.log('Login canceled');
+      });
+    });
+  });
+  </script>
+</body>
 </html>
