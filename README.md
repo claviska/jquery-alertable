@@ -120,7 +120,7 @@ Available options:
 
 - `okButton`: HTML to use for the resolve button. Default value:
 ```html
-<button class="alertable-ok" type="button">OK</button>
+<button class="alertable-ok" type="submit">OK</button>
 ```
 
 - `overlay`: HTML to use for the overlay. Default value:
